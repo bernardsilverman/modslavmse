@@ -1,6 +1,6 @@
 Package: modslavmse
 Title: Multiple Systems Estimates for estimating the prevalence of Modern Slavery
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R: person("Bernard", "Silverman", email = "bernard.silverman@stats.ox.ac.uk", role = c("aut", "cre"))
 Description: This package brings together routines for estimating the prevalence of Modern Slavery, as set out in work by Bernard Silverman and collaborators
 Depends: R (>= 3.3.2)

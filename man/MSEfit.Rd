@@ -2,17 +2,18 @@
 % Please edit documentation in R/MSEfit.R
 \name{MSEfit}
 \alias{MSEfit}
-\title{Fit MSE model using the Rcapture routine closedpCI.t}
+\title{Fit MSE model using the \code{Rcapture} routine \code{closedpCI.t()}}
 \usage{
-MSEfit(zdat = UKdat, mainonly = F, pthresh = 0.01)
+MSEfit(zdat = UKdat, mainonly = F, pthresh = 0.05)
 }
 \arguments{
-\item{zdat}{Input data frame.  If there are k lists the first k columns are 1/0 to denote presence or absence on the relevant list; the last column is the count}
+\item{zdat}{Input data frame.  If there are \eqn{k} lists the first \eqn{k} columns are 1/0 to denote presence or absence on the relevant list; the last column is the count}
 
-\item{mainonly}{If T then the stepwise method of BHS is used}
+\item{mainonly}{If \code{mainonly = T} then the stepwise method of BHS is used to choose a model; if \code{F} then only main effects are fitted with no interactions}
 
 \item{pthresh}{The significance level that a new parameter has to reach to be included}
 }
 \description{
-Implements the method of Bales, Hesketh and Silverman
+Implements the method of Bales, Hesketh and Silverman.  The routine calls the routine \code{closedpCI.t()} from the package \code{Rcapture} and returns
+  an object which has the structure described in the documentation of that package.
 }

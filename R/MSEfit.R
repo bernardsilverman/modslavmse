@@ -1,14 +1,16 @@
-#' Fit MSE model using the Rcapture routine closedpCI.t
+#' Fit MSE model using the \code{Rcapture} routine \code{closedpCI.t()}
 #'
-#' Implements the method of Bales, Hesketh and Silverman
+#' Implements the method of Bales, Hesketh and Silverman.  The routine calls the routine \code{closedpCI.t()} from the package \code{Rcapture} and returns
+#'   an object which has the structure described in the documentation of that package. 
 #'
-#' @param zdat Input data frame.  If there are k lists the first k columns are 1/0 to denote presence or absence on the relevant list; the last column is the count
-#' @param mainonly If T then the stepwise method of BHS is used
+#' @param zdat Input data frame.  If there are \eqn{k} lists the first \eqn{k} columns are 1/0 to denote presence or absence on the relevant list; the last column is the count
+#' @param mainonly If \code{mainonly = T} then the stepwise method of BHS is used to choose a model; if \code{F} then only main effects are fitted with no interactions
 #' @param  pthresh The significance level that a new parameter has to reach to be included
 #'
 #' @export
+#' 
 MSEfit <-
-function (zdat=UKdat, mainonly=F, pthresh=0.01) 
+function (zdat=UKdat, mainonly=F, pthresh=0.05) 
 {
 #
 #  if mainonly= F carry out the stepwise model fitting procedure as set out in Bales, Hesketh and Silverman,
