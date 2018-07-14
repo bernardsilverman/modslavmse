@@ -7,8 +7,12 @@
 cleanuplists(zmse, includezerocounts = F)
 }
 \arguments{
-\item{includezerocounts}{If F then remove zero rows.  If T then include all possible capture histories including those with zero count}
+\item{includezerocounts}{If F then remove zero rows.  If T then include all possible capture histories including those with zero count, excluding the all-zero row corresponding to the dark figure.}
 }
 \description{
-Consolidate counts for identical capture histories
+Consider an incidence matrix \code{mse} with \eqn{k+1} columns, where the first \eqn{k} columns are 1/0 denoting whether
+   the relevant list is in the capture history, and the last column is the count of cases with that capture history.  This 
+   routine finds rows with the same capture history and consolidates them into a single row whose count is the sum of counts of
+   the relevant rows.  If \code{includezerocounts = T} then it also includes all the capture histories with zero counts; otherwise
+   these are all removed.
 }

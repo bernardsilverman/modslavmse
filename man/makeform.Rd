@@ -17,3 +17,7 @@ makeform(zdata, interactions = NULL, includetwofac = T)
 Given the data frame \code{zdata} in \code{Rcapture} form, 
    creates a formula with the interactions given.
 }
+\details{
+This routine is called by the Markov Chain Monte Carlo routine \code{\link{MCMCfit}}.  The routine \code{\link{MSEfit}} uses a formula with 
+ numbered variables \eqn{c1, c2, \ldots } rather than using the names of the variables.
+}

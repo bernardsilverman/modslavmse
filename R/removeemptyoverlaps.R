@@ -10,19 +10,19 @@
 #' @return removed  A matrix whose columns give the omitted pairs
 #' @export
 #'
-removeemptyoverlaps <-
-function (zdata) 
-{
-
-zfull = cleanuplists(zdata, includezerocounts=T)
-nd2=dim(zfull)[2]
-#for each pair, remove if all zeroes below it
-    		rempairs = NULL
-     			for (i in (1:(nd2-2))) for (j in ((i+1):(nd2-1))) {
-       			countbelow= sum( zfull[,i]*zfull[,j]*zfull[,nd2])
-       		if (countbelow==0) {
-           		rempairs= cbind(rempairs, c(i,j))
-			zfull = zfull[ zfull[,i]*zfull[,j] == 0, ] } }
-#
-       return(list(data=zfull, removed=rempairs))
+removeemptyoverlaps <- function(zdata) {
+    
+    zfull = cleanuplists(zdata, includezerocounts = T)
+    nd2 = dim(zfull)[2]
+    # for each pair, remove if all zeroes below it
+    rempairs = NULL
+    for (i in (1:(nd2 - 2))) for (j in ((i + 1):(nd2 - 1))) {
+        countbelow = sum(zfull[, i] * zfull[, j] * zfull[, nd2])
+        if (countbelow == 0) {
+            rempairs = cbind(rempairs, c(i, j))
+            zfull = zfull[zfull[, i] * zfull[, j] == 0, ]
+        }
+    }
+    # 
+    return(list(data = zfull, removed = rempairs))
 }

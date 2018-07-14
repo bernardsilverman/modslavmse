@@ -9,10 +9,11 @@
 #' @param includezerocounts  If F remove all rows with zero counts.  If T then include all possible observed capture combinations.
 #' @export
 #'
-omitlists <- function (zmse, i, j=NULL, k=NULL, l=NULL, rowclean=T, includezerocounts=F) {    
-	zmse=as.matrix(zmse)
-	zmse = zmse[ , -c(i,j,k,l)]
-	if (rowclean) zmse= cleanuplists(zmse, includezerocounts=includezerocounts) 
-zmse=as.data.frame(zmse)
-return(zmse)
+omitlists <- function(zmse, i, j = NULL, k = NULL, l = NULL, rowclean = T, includezerocounts = F) {
+    zmse = as.matrix(zmse)
+    zmse = zmse[, -c(i, j, k, l)]
+    if (rowclean) 
+        zmse = cleanuplists(zmse, includezerocounts = includezerocounts)
+    zmse = as.data.frame(zmse)
+    return(zmse)
 }
