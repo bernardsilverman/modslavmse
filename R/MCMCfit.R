@@ -2,15 +2,20 @@
 #' 
 #' Use the \pkg{MCMCpack} routine \code{MCMCpoisson} to fit a multiple systems estimation model. 
 #'
-#' @details This routine uses the routine \code{\link{MCMCpoisson()}} from the \pkg{MCMCpack} package. It works by casting the 
-#'   MSE problem into the form required by that routine and passing the MCMC parameters to that routine. It calls the routine \code{\link{cleanuplists}}.
+#' @details This routine uses the routine \code{\link{MCMCpoisson()}} from the \pkg{MCMCpack} package. 
+#'   It works by casting the 
+#'   MSE problem into the form required by that routine and passing the MCMC parameters to that routine. 
+#'  It calls the routine \code{\link{cleanuplists}}.
 #'
 #'
 #' @param zdata an incidence matrix of the form supplied to \code{MSEfit}
-#' @param priorprec If positive, the reciprocal of the prior variance of the two factor interaction parameters.  If zero, an improper prior over \eqn{(-\infty, \infty)}. If negative, then only main effects are fitted.  
+#' @param priorprec If positive, the reciprocal of the prior variance of the two factor interaction parameters.  
+#'  If zero, an improper prior over \eqn{(-\infty, \infty)}. If negative, then only main effects are fitted.  
 #' @param mainprec The reciprocal of the prior variance of the main effect parameters. Only used if \code{priorprec > 0}.
-#' @param sigthresh If \code{sigthresh > 0} the analysis is repeated dropping out any effects whose ratio of posterior mean to standard deviation does not reach \code{sigthresh}
-#' @param totalpopest If \code{totalpopest=T} then routine outputs the MCMC of the dark figure plus the original data, in other words an estimate of the total population
+#' @param sigthresh If \code{sigthresh > 0} the analysis is repeated dropping out any effects whose ratio of posterior mean 
+#'  to standard deviation does not reach \code{sigthresh}
+#' @param totalpopest If \code{totalpopest=T} then routine outputs the MCMC of the dark figure plus the original data, 
+#'   in other words an estimate of the total population
 #' @param runzerothresh If supplied, the result of a previous run with \code{sigthresh=0} and \code{totalpopest=F}
 #' @param ... control parameters such as \code{mcmc}, \code{thin} and \code{seed} passed to \code{MCMCpoisson()}
 #' @export
