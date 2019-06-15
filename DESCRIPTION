@@ -8,9 +8,5 @@ Description: This package brings together routines for estimating the prevalence
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
-Imports: 
-    Rcapture,
-    MCMCpack,
-    dga,
-    LCMCR
+Imports: Rcapture, MCMCpack, dga, LCMCR
 RoxygenNote: 6.1.1
