@@ -9,7 +9,7 @@ MSEretconf(zdat, zfit, mX, retfit)
 \arguments{
 \item{zdat}{Original data set}
 
-\item{zfit}{The full fit as returned by \code{\link[Rcapture]{closedpCI.t}}}
+\item{zfit}{The full fit as returned by \code{closedpCI.t}}
 
 \item{mX}{The particular model being fitted}
 

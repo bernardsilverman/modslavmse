@@ -26,6 +26,6 @@ MCMCfit(zdata, priorprec = 1, mainprec = 1e-04, sigthresh = 2,
 Use the \pkg{MCMCpack} routine \code{MCMCpoisson} to fit a multiple systems estimation model.
 }
 \details{
-This routine uses the routine \code{\link{MCMCpoisson()}} from the \pkg{MCMCpack} package. It works by casting the 
+This routine uses the routine \code{MCMCpoisson()} from the \pkg{MCMCpack} package. It works by casting the 
   MSE problem into the form required by that routine and passing the MCMC parameters to that routine. It calls the routine \code{\link{cleanuplists}}.
 }
