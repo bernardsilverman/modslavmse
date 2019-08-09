@@ -1,12 +1,17 @@
 Package: modslavmse
-Type: Package
 Title: Multiple Systems Estimates for estimating the prevalence of Modern Slavery
-Version: 1.1
+Version: 2.0
+Year: 2018
+Date: 08 Aug 2019
 Authors@R: person("Bernard W.", "Silverman", email = "mail@bernardsilverman.co.uk", role = c("aut", "cre"))
-Maintainer: Bernard Silverman <mail@bernardsilverman.co.uk>
 Description: This package brings together routines for estimating the prevalence of Modern Slavery, as set out in work by Bernard Silverman and collaborators
+Depends: R (>= 3.3.2)
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
-Imports: Rcapture, MCMCpack, dga, LCMCR
 RoxygenNote: 6.1.1
+Imports: Rcapture,
+    MCMCpack
+Suggests: MCMCpack,
+    dga,
+    LCMCR

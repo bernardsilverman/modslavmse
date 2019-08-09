@@ -12,9 +12,10 @@
 #'
 #' The other purpose of this package is to implement development versions of current research directions.  A current focus is on Monte
 #' Carlo Markov Chain approaches which allow some sort of model averaging, rather than the focus on a particular model implicit
-#' in \code{MSEfit}.   This makes use of the package \pkg{MCMCpack}.
+#' in \code{MSEfit}.   This makes use of the package MCMCpack.
 #'
-#' The third, more specific, purpose is to allow full reproducibility of the work presented in Silverman (2018).   This is done through the scripts given in the Examples section below.
+#' The third, more specific, purpose is to allow full reproducibility of the work presented in Silverman (2018).   
+#' This is done through the scripts given in the Examples section below.
 #'
 #' @examples
 #'
@@ -35,3 +36,4 @@
 #' 
 #'   
 "_PACKAGE"
+# > [1] '_PACKAGE'
