@@ -15,10 +15,10 @@ If zero, an improper prior over \eqn{(-\infty, \infty)}. If negative, then only 
 
 \item{mainprec}{The reciprocal of the prior variance of the main effect parameters. Only used if \code{priorprec > 0}.}
 
-\item{sigthresh}{If \code{sigthresh > 0} the analysis is repeated dropping out any effects whose ratio of posterior mean 
+\item{sigthresh}{If \code{sigthresh > 0} the analysis is repeated dropping out any effects whose ratio of posterior mean
 to standard deviation does not reach \code{sigthresh}}
 
-\item{totalpopest}{If \code{totalpopest=T} then routine outputs the MCMC of the dark figure plus the original data, 
+\item{totalpopest}{If \code{totalpopest=T} then routine outputs the MCMC of the dark figure plus the original data,
 in other words an estimate of the total population}
 
 \item{runzerothresh}{If supplied, the result of a previous run with \code{sigthresh=0} and \code{totalpopest=F}}
@@ -29,8 +29,8 @@ in other words an estimate of the total population}
 Use the \pkg{MCMCpack} routine \code{MCMCpoisson} to fit a multiple systems estimation model.
 }
 \details{
-This routine uses the routine \code{\link{MCMCpoisson()}} from the \pkg{MCMCpack} package. 
-  It works by casting the 
-  MSE problem into the form required by that routine and passing the MCMC parameters to that routine. 
+This routine uses the routine \code{\link{MCMCpoisson()}} from the \pkg{MCMCpack} package.
+  It works by casting the
+  MSE problem into the form required by that routine and passing the MCMC parameters to that routine.
  It calls the routine \code{\link{cleanuplists}}.
 }
